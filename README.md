@@ -59,9 +59,18 @@ Initialize the pacman keyring and populate the Arch Linux ARM package signing ke
 pacman-key --init
 pacman-key --populate archlinuxarm
 ```
-Updete system and passwords
+Update system and install `sudo`
 ```bash
 pacman -Syu
+pacman -S sudo
+vim /etc/sudoers
+```
+Uncomment
+```python
+%wheel ALL=(ALL) ALL
+```
+Change passwords
+```bash
 passwd
 passwd alarm
 exit
@@ -69,6 +78,5 @@ exit
 
 ## Some apps
 ```bash
-su
-pacman -S gvim sudo
+sudo pacman -S gvim
 ```
