@@ -66,3 +66,9 @@ passwd
 passwd alarm
 exit
 ```
+
+## Some apps
+```bash
+su
+pacman -S gvim sudo
+```
