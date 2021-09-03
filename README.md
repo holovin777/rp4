@@ -51,7 +51,7 @@ sudo rm -r tmp
 ### Example
 Example via SSH from PC:
 ```bash
-ssh alarm@192.168.1.XXX
+ssh alarm@alarm
 su
 ```
 Initialize the pacman keyring and populate the Arch Linux ARM package signing keys:
