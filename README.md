@@ -80,3 +80,41 @@ exit
 ```bash
 sudo pacman -S gvim
 ```
+
+## Mount usb to /home directory
+Insert usb device
+```bash
+sudo fdisk -l
+sudo fdisk /dev/sdX
+o
+n
+default
+default
+default
+w
+sudo mkfs.ext4 /dev/sdX1
+sudo mkdir /dev1
+sudo mount /dev/sdX1 /dev1
+sudo rsync -r -P ../../home/* ../../dev1
+sudo cd /
+sudo rm -r home/*
+sudo umount /dev/sdX1
+sudo mount /dev/sdX1 /home
+sudo chown -R alarm:users /home/alarm
+sudo chown -R alarm:users /home/alarm/.[^.]*
+ls -l /dev/disk/by-uuid/
+sudo vim /etc/fstab
+```
+```python
+#Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+/dev/mmcblk1p1  /boot   vfat    defaults        0       0
+
+UUID=enter-your-uuid-code       /home           ext4            rw,relatime
+ 0 1
+```
+```bash
+sudo reboot
+```
