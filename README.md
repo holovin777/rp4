@@ -78,7 +78,7 @@ exit
 
 ## Some apps
 ```bash
-sudo pacman -S gvim
+sudo pacman -S gvim git
 ```
 
 ## Mount usb to /home directory
