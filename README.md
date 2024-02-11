@@ -1,5 +1,5 @@
 # rp4
-Cheetsheat install guide ArchLinux Raspberry Pi 4
+Cheetsheat install guide ArchLinux Raspberry Pi
 
 ## Init from PC
 Insert SD card into the computer.
@@ -40,7 +40,7 @@ cd
 sudo rm -r tmp
 ```
 
-## From Raspberry Pi 4
+## From Raspberry Pi
 - Insert the SD card into the Raspberry Pi.
 - Connect ethernet.
 - Apply 5V power.
