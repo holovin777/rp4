@@ -28,9 +28,9 @@ sudo mount /dev/sdX1 boot
 sudo mkfs.ext4 /dev/sdX2
 mkdir root
 sudo mount /dev/sdX2 root
-wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz
+wget http://your-os.tar.gz
 su
-bsdtar -xpf ArchLinuxARM-rpi-aarch64-latest.tar.gz -C root
+bsdtar -xpf your-os.tar.gz -C root
 sync
 mv root/boot/* boot
 sed -i 's/mmcblk0/mmcblk1/g' root/etc/fstab
