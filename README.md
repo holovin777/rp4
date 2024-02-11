@@ -36,7 +36,7 @@ mv root/boot/* boot
 sed -i 's/mmcblk0/mmcblk1/g' root/etc/fstab
 umount boot root
 exit
-cd
+cd ..
 sudo rm -r tmp
 ```
 
